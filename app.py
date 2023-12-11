@@ -1,18 +1,24 @@
-# ResNet50 model pretrained on ImageNet and removes the top classification layer. It adds a GlobalMaxPooling2D layer to obtain a fixed-size vector representation for each image.
-# Defined a function named extract_features which will extract features from all training data set and store the results in variable normalized_result.
-# Stored path of all the images in variable "filenames" with the help of os library.
-# Stored all the features of training data in variable feature_list
-# Created two folders named embeddings and fimenames in project to store the extracted features and filenames respectively. Used pickle library to do this.
+1)Utilizing a Pretrained ResNet50 Model: The script employs a ResNet50 model pretrained on ImageNet, with the top classification layer removed. This is followed by adding a GlobalMaxPooling2D layer to obtain a fixed-size vector representation of each image.
 
-# Stored the features and paths in two variables named feature_list and filenames.
-# Used same ResNet50 model to extract features of new test image.
-# Used K-NearestNeighbors to predict 5 closest images. Used euclidean distance.
+2)Feature Extraction Function: A function named extract_features is defined to extract features from all training dataset images. These features are stored in a variable normalized_result.
 
-# Used streamlit library to create a website.
-# Created a folder named "uploads" in the project to store the new test image. Also displayed the image.
-# Then used the features and paths stored in feature_list and filenames to predict the closest 5 images using KNN.
-# Displayed those 5 images as well.
+3)Storing Image Paths: The paths of all images are stored in a variable filenames using the os library.
 
+4)Feature List Creation: The features of the training data are stored in a variable feature_list.
+
+5)Folder Creation for Embeddings and Filenames: Two folders, named embeddings and filenames, are created in the project to store the extracted features and filenames, respectively. The pickle library is used for this purpose.
+
+6)Feature and Path Storage: The features and paths are stored in two variables named feature_list and filenames.
+
+7)Feature Extraction for Test Image: The same ResNet50 model is used to extract features from a new test image.
+
+8)K-Nearest Neighbors for Image Prediction: The script uses K-Nearest Neighbors (KNN) algorithm with euclidean distance to predict the 5 closest images based on the test image features.
+
+9)Streamlit for Web Interface: The Streamlit library is used to create a website interface.
+
+10)Handling Test Image Uploads: A folder named uploads is created in the project to store new test images. These images are also displayed on the website.
+
+11)Displaying Predicted Images: The script uses the features and paths stored in feature_list and filenames to predict and display the closest 5 images using KNN.
 
 import streamlit as st
 import os
